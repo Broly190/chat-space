@@ -26,8 +26,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
-|chat_member|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :users, through: :groups_users
@@ -38,7 +37,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|text|string|null: false|
+|text|string|
+|image|string|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
