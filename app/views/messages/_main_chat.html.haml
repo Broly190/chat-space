@@ -1,0 +1,41 @@
+.main-chat
+  .main-chat__group-info
+    .main-chat__left-box
+      %h1.main-chat__left-box__current-group
+        text
+      %ul.main-chat__left-box__member-list
+
+        Member :
+        %li.main-chat__left-box__member-list__member masa
+    = link_to "#" do
+      .main-chat__edit-btn
+        Edit
+  .main-chat__message-list
+    .message
+      .message-info
+        .message-info__talker
+          masa
+        .message-info__date
+          2020/11/07(Wed) 11:00:00
+      %p.message__text
+        おはよう！
+    .message
+      .message-info
+        .message-info__talker
+          masa
+        .message-info__date
+          2020/11/07(Wed) 11:00:00
+      %p.message__text
+        おはよう！
+
+  .main-chat__message-form
+    %form.main-chat__message-form__form
+      .main-chat__message-form__form__box
+        %input{:type => "text", :class => "main-chat__message-form__form__box__input", :placeholder => "type a message"}
+        %label{class: "main-chat__message-form__form__box__input__image"}
+          = icon("fas", "image")
+          %input{:type => "file", :class => "main-chat__message-form__form__box__input__file"}
+
+      %input{:type => "submit", :class => "main-chat__message-form__form__box__send"}
+
+
