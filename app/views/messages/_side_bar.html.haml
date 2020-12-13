@@ -6,20 +6,16 @@
       .top-items__icons
         %ul.top-items__icons__menu
           %li.top-items__icons__menu__new-group
-            = link_to  do
+            = link_to  new_group_path do
               = icon('fas', 'pen-square', class: 'icon')
           %li.top-items__icons__menu__edit-user
             = link_to edit_user_path(current_user) do
               = icon('fas', 'cog', class: 'icon')
-  .groups
-    .group
-      %p.group-name
-        techcamp
-      %p.group-latest-message
-        まだメッセージがありません
-
-    .group
-      %p.group-name
-        techcamp
-      %p.group-latest-message
-        まだメッセージがありません
+  .groups-list
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          %p.group-name
+            = group.name
+          %p.group-latest-message
+            まだメッセージがありません
